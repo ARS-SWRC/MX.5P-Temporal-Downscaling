@@ -29,6 +29,7 @@ In order for downscaled MX.5P to be determined, the user must calculate MX.5P us
 | Station latitude | Lat | deg. | 1 |
 | Station coastal proximity | Coastal Prox | km | 1 |
 | Calendar month (categorical variable) | Month | - | 12 |
+
 The definition of the Modified Fournier index is given in Renard and Freimund (1994) *Using Monthly Precipitation Data to Estimate the R-factor in the Revised USLE* in the Journal of Hydrology.
 
 The predictor variables should be put into a comma separated *.csv file with the same formatting as the placeholder files (e.g. MX5P_X_60min_Placeholder.csv). The placeholder files allow the code to be run successfully but should be replaced with the user’s own file. The XY files (e.g. MX5P_XY_60min.csv) contain both the predicted and predictor variables and are used for fitting the models prior to making predictions of downscaled MX.5P based on the user’s predictor variables. 
