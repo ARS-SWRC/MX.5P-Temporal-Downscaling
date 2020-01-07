@@ -34,7 +34,7 @@ The definition of the Modified Fournier index is given in Renard and Freimund (1
 
 The predictor variables should be put into a comma separated *.csv file with the same formatting as the placeholder files (e.g. MX5P_X_60min_Placeholder.csv). The placeholder files allow the code to be run successfully but should be replaced with the user’s own file. The XY files (e.g. MX5P_XY_60min.csv) contain both the predicted and predictor variables and are used for fitting the models prior to making predictions of downscaled MX.5P based on the user’s predictor variables. 
 
-The script produces a text file in the working directory with the downscaled MX.5P values listed in the order corresponding to the order of values in the file supplied by the user. Some user input is required to specify the working directory, file paths, the resolution of the precipitation data, and the desired machine learning model. This requires the user to manually edit the script.
+The script produces a text file in the working directory with the downscaled MX.5P values listed in the order corresponding to the order of values in the file supplied by the user. Some user input is required to specify: the working directory, file paths, the resolution of the precipitation data, and the desired machine learning model. This requires the user to manually edit the script.
 
 The gradient boosting models yield less error. Values of RMSE for the 60, 180 and 1440-min were 2.24, 2.74 and 3.76 mm/hr, respectively. For random forest, the values were 2.81, 3.39 and 4.67, respectively.
 
