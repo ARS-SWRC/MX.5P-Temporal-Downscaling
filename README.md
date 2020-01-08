@@ -36,5 +36,5 @@ The predictor variables should be put into a comma separated *.csv file with the
 
 The script produces a text file in the working directory with the downscaled MX.5P values listed in the order corresponding to the order of values in the file supplied by the user. Some user input is required to specify: the working directory, file paths, the resolution of the precipitation data, and the desired machine learning model. This requires the user to manually edit the script.
 
-The gradient boosting models yield less error. Values of RMSE for the 60, 180 and 1440-min were 2.24, 2.74 and 3.76 mm/hr, respectively. For random forest, the values were 2.81, 3.39 and 4.67, respectively.
+The gradient boosting models yield less error. Values of RMSE for the 60, 180 and 1440-min were 2.24, 2.74 and 3.76 mm/hr, respectively. For random forest, the values were 2.81, 3.39 and 4.67, respectively. The models were calibrated for the contiguous United States, and therefore, error is expected to be higher if the models are applied to drastically different climates and/or latitudes.
 
