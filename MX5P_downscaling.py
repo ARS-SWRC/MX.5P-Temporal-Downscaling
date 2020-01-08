@@ -15,7 +15,7 @@ import numpy as np
 'user_file placeholders use original X data.'
 '*file paths for windows OS.'
 ###############################################################################
-working_directory = r'C:\Users\afullhart\Desktop\XFER\XFER'
+working_directory = r'C:\Users\UserName\Documents'
 fitting_file = 'MX5P_XY_60min.csv' 
 user_file = 'MX5P_X_60min_Placeholder.csv'
 resolution = 60 
