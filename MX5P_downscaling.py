@@ -3,6 +3,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 from statsmodels.tools import categorical
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
 
 ###############################################################################
@@ -15,7 +16,7 @@ import numpy as np
 'user_file placeholders use original X data.'
 '*file paths for windows OS.'
 ###############################################################################
-working_directory = r'C:\Users\UserName\Documents'
+working_directory = Path('output')
 fitting_file = 'MX5P_XY_60min.csv' 
 user_file = 'MX5P_X_60min_Placeholder.csv'
 resolution = 60 
@@ -32,7 +33,7 @@ par_dict = {'RF60':[50, 20, 200], 'RF180':[50, 20, 200], 'RF1440':[100, 20, 200]
 
 pars = par_dict[model + str(resolution)]
 
-file_df = pd.read_csv(working_directory + '\\' + fitting_file, header=0)
+file_df = pd.read_csv(fitting_file, header=0)
 
 X = file_df.loc[:,'MX.5P_up':]
 y = file_df['MX.5P_brkpt']
@@ -52,7 +53,7 @@ X = pd.DataFrame(X_cat, columns=columns)
 ###############################################################################
 'prediction data'
 ###############################################################################
-user_df = pd.read_csv(working_directory + '\\' + user_file, header=0)
+user_df = pd.read_csv(user_file, header=0)
 
 X_user = user_df.loc[:,:]
 
@@ -95,7 +96,10 @@ y_pred = regr.predict(X_user)
 'writing predictions to file'
 ###############################################################################
 
-with open(working_directory + '\\' + 'out.txt', 'w') as f:
+if not working_directory.exists():
+    working_directory.mkdir(parents=True, exist_ok=True)
+
+with open(working_directory / 'out.txt', 'w') as f:
     
     for value in y_pred:
         
