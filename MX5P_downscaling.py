@@ -8,13 +8,16 @@ from pathlib import Path
 
 ###############################################################################
 'USER INPUT'
-'work_directory: folder path string to input files'
-'input_file options: MX5P_XY_Zmin.csv string where Z is 60, 180 or 1440'
-'resolution options: 60, 180 or 1440'
+
+'fitting_file options: MX5P_XY_Zmin.csv string where Z is 60, 180 or 1440'
+'user_file options: MX5P_X_Zmin_Placeholder.csv string where Z is 60, 180 or 1440'
+'resolution options: 60, 180 or 1440 integers'
 'model options: RF or GB strings'
-'user_file: file string from user with predictor variables'
-'user_file placeholders use original X data.'
-'*file paths for windows OS.'
+
+'**user_file placeholders use original X data and should be replaced with'
+'the users own data.'
+
+'**file paths work for Windows and Mac OS.'
 ###############################################################################
 working_directory = Path('output')
 fitting_file = 'MX5P_XY_60min.csv' 
